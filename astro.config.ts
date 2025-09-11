@@ -1,13 +1,13 @@
 import { loadEnv } from "vite";
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
-import expressiveCode from 'astro-expressive-code';
-import mdx from '@astrojs/mdx';
-import sitemap from '@astrojs/sitemap';
-import spectre from './package/src';
+import expressiveCode from "astro-expressive-code";
+import mdx from "@astrojs/mdx";
+import sitemap from "@astrojs/sitemap";
+import spectre from "./package/src";
 
-import node from '@astrojs/node';
-import { spectreDark } from './src/ec-theme';
+import node from "@astrojs/node";
+import { spectreDark } from "./src/ec-theme";
 
 const {
   GISCUS_REPO,
@@ -18,13 +18,13 @@ const {
   GISCUS_STRICT,
   GISCUS_REACTIONS_ENABLED,
   GISCUS_EMIT_METADATA,
-  GISCUS_LANG
+  GISCUS_LANG,
 } = loadEnv(process.env.NODE_ENV!, process.cwd(), "");
 
 // https://astro.build/config
 const config = defineConfig({
-  site: 'https://spectre.lou.gg',
-  output: 'static',
+  site: "https://spectre.lou.gg",
+  output: "static",
   integrations: [
     expressiveCode({
       themes: [spectreDark],
@@ -32,36 +32,36 @@ const config = defineConfig({
     mdx(),
     sitemap(),
     spectre({
-      name: 'Spectre',
+      name: "Avik Paul",
       openGraph: {
         home: {
-          title: 'Spectre',
-          description: 'A minimalistic theme for Astro.'
+          title: "Avik Paul",
+          description: "The personal website of Avik Paul.",
         },
         blog: {
-          title: 'Blog',
-          description: 'News and guides for Spectre.'
+          title: "Blog",
+          description: "News and guides for Spectre.",
         },
         projects: {
-          title: 'Projects'
-        }
+          title: "Projects",
+        },
       },
-      giscus: {
-        repository: GISCUS_REPO,
-        repositoryId: GISCUS_REPO_ID,
-        category: GISCUS_CATEGORY,
-        categoryId: GISCUS_CATEGORY_ID,
-        mapping: GISCUS_MAPPING as any,
-        strict: GISCUS_STRICT === "true",
-        reactionsEnabled: GISCUS_REACTIONS_ENABLED === "true",
-        emitMetadata: GISCUS_EMIT_METADATA === "true",
-        lang: GISCUS_LANG,
-      }
-    })
+      // giscus: {
+      //   repository: GISCUS_REPO,
+      //   repositoryId: GISCUS_REPO_ID,
+      //   category: GISCUS_CATEGORY,
+      //   categoryId: GISCUS_CATEGORY_ID,
+      //   mapping: GISCUS_MAPPING as any,
+      //   strict: GISCUS_STRICT === "true",
+      //   reactionsEnabled: GISCUS_REACTIONS_ENABLED === "true",
+      //   emitMetadata: GISCUS_EMIT_METADATA === "true",
+      //   lang: GISCUS_LANG,
+      // }
+    }),
   ],
   adapter: node({
-    mode: 'standalone'
-  })
+    mode: "standalone",
+  }),
 });
 
 export default config;

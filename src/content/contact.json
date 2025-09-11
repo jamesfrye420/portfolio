@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "icon": {
+      "type": "lucide",
+      "name": "mail"
+    },
+    "text": "avikpaul2002@gmail.com",
+    "link": "mailto:avikpaul2002@gmail.com"
+  },
+  {
+    "id": 2,
+    "icon": {
+      "type": "lucide",
+      "name": "mail"
+    },
+    "text": "avik@astraus.co",
+    "link": "mailto:avik@astraus.co"
+  }
+]
