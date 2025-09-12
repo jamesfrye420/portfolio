@@ -1,9 +1,23 @@
 [
   {
     "id": 1,
-    "duration": "2024 - present",
-    "company": "Astro Community",
-    "title": "Astro Theme",
-    "description": "Existing as an Astro theme for anyone to use."
+    "duration": "2023 - Present",
+    "company": "KeyShade",
+    "title": "Open Source Contributor",
+    "description": "Created 3rd-party platform integrations for Vercel, Heroku. Implemented robust RBAC system for enhanced security and collaboration."
+  },
+  {
+    "id": 2,
+    "duration": "March 2023 - April 2024",
+    "company": "Alumnik Ltd",
+    "title": "Full Stack Developer (Founding Engineer)",
+    "description": "Architected and built complete connectivity platform from scratch. Reduced API response times from 800ms to under 100ms, implemented 5x faster page loads with AWS CloudFront."
+  },
+  {
+    "id": 3,
+    "duration": "June 2024 - Present",
+    "company": "Zendot Technologies Pvt Ltd",
+    "title": "Full Stack Developer",
+    "description": "Building real-time surveillance systems with facial recognition. Accelerated deployments by 80%, reduced build times by 70%, and mentoring 3 junior developers."
   }
 ]
