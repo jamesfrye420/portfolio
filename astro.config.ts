@@ -7,6 +7,7 @@ import sitemap from "@astrojs/sitemap";
 import spectre from "./package/src";
 
 import node from "@astrojs/node";
+import netlify from "@astrojs/netlify";
 import { spectreDark } from "./src/ec-theme";
 
 const {
@@ -23,7 +24,7 @@ const {
 
 // https://astro.build/config
 const config = defineConfig({
-  site: "https://spectre.lou.gg",
+  site: "https://avikpaul.netlify.app",
   output: "static",
   integrations: [
     expressiveCode({
@@ -59,8 +60,8 @@ const config = defineConfig({
       // }
     }),
   ],
-  adapter: node({
-    mode: "standalone",
+  adapter: netlify({
+    edgeMiddleware: true,
   }),
 });
 
